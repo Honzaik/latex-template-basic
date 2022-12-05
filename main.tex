@@ -1,0 +1,91 @@
+%%% The main file. It contains definitions of basic parameters and includes all other parts.
+
+%% Settings for single-side (simplex) printing
+% Margins: left 40mm, right 25mm, top and bottom 25mm
+% (but beware, LaTeX adds 1in implicitly)
+\documentclass[12pt,a4paper]{report}
+\setlength\textwidth{145mm}
+\setlength\textheight{247mm}
+\setlength\oddsidemargin{15mm}
+\setlength\evensidemargin{15mm}
+\setlength\topmargin{0mm}
+\setlength\headsep{0mm}
+\setlength\headheight{0mm}
+% \openright makes the following text appear on a right-hand page
+\let\openright=\clearpage
+
+%% Settings for two-sided (duplex) printing
+% \documentclass[12pt,a4paper,twoside,openright]{report}
+% \setlength\textwidth{145mm}
+% \setlength\textheight{247mm}
+% \setlength\oddsidemargin{14.2mm}
+% \setlength\evensidemargin{0mm}
+% \setlength\topmargin{0mm}
+% \setlength\headsep{0mm}
+% \setlength\headheight{0mm}
+% \let\openright=\cleardoublepage
+
+%% Generate PDF/A-2u
+\usepackage[a-2u]{pdfx}
+
+%% Character encoding: usually latin2, cp1250 or utf8:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%% Prefer Latin Modern fonts
+\usepackage{lmodern}
+
+%% Further useful packages (included in most LaTeX distributions)
+\usepackage{amsmath}        % extensions for typesetting of math
+\usepackage{amsfonts}       % math fonts
+\usepackage{amsthm}         % theorems, definitions, etc.
+\usepackage{bbding}         % various symbols (squares, asterisks, scissors, ...)
+\usepackage{bm}             % boldface symbols (\bm)
+\usepackage{graphicx}       % embedding of pictures
+\usepackage{fancyvrb}       % improved verbatim environment
+\usepackage[english]{babel}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=none
+]{biblatex}
+\addbibresource{bibliography.bib}
+%\usepackage[nottoc]{tocbibind}
+
+\usepackage{dcolumn}        % improved alignment of table columns
+\usepackage{booktabs}       % improved horizontal lines in tables
+\usepackage{paralist}       % improved enumerate and itemize
+\usepackage{xcolor}         % typesetting in color
+\usepackage{pdfsync}
+\usepackage{enumitem}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{csquotes}
+\usepackage{hyperref}
+
+\input{macros}
+
+%% The hyperref package for clickable links in PDF and also for storing
+%% metadata to PDF (including the table of contents).
+%% Most settings are pre-set by the pdfx package.
+\hypersetup{unicode}
+\hypersetup{breaklinks=true}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkred,
+    filecolor=darkred,
+    urlcolor=darkred,
+    citecolor=darkred
+}
+
+% Definitions of macros (see description inside)
+
+% Title page and various mandatory informational pages
+\begin{document}
+
+hey
+%%% Bibliography
+%\include{bibliography}
+
+\end{document}
